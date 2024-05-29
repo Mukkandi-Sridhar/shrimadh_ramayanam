@@ -107,16 +107,21 @@
         font-size: 1.25rem;
       }
     }
-/* Video Section Styles */
-#video {
-    background-color: #f8f9fa; /* Choose your desired background color */
+/* Video Container Styles */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
 }
 
-#video iframe {
-    width: 100%; /* Make the video responsive */
-    max-width: 100%; /* Ensure the video doesn't exceed its container */
-    height: auto; /* Allow the video to adjust its height accordingly */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
+
 
     </style>
 </head>
@@ -234,13 +239,15 @@
             </div>
     </section>
  
- <!-- New Video Section -->
+<!-- New Video Section -->
 <section id="video" class="py-5">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <!-- You can replace this with your actual video or a placeholder -->
-                <iframe width="560" height="315" src="./video.mp4" frameborder="0" allowfullscreen></iframe>
+            <div class="col-md-8">
+                <div class="video-container">
+                    <!-- You can replace this with your actual video or a placeholder -->
+                    <iframe width="560" height="315" src="./video.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </div>
