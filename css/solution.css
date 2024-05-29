@@ -1,47 +1,238 @@
+
+/* Base Styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
 .gradient-background {
-  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    color: white;
 }
 
 @keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.icon-square {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 0.75rem;
-}
-
-.profile-img {
-  border-radius: 50%;
-  height: 100px;
-}
-p {
-    margin:0;
-    padding: 0;
-}
-#testimonial {
-    padding: 2rem 0; /* Adjust as needed */
-}
-
-#video {
-    padding: 2rem 0; /* Adjust as needed */
-}
+/* Title Section */
 #title {
-    padding: 2rem 0; /* Adjust as needed */
+    padding: 2rem 0;
+    text-align: center;
 }
 
+#title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#title .btn {
+    margin: 0.5rem;
+}
+
+#title img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Features Section */
+#features {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+}
+
+#features .icon-square {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+#features h3 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-top: 1rem;
+}
+
+#features p {
+    color: #6c757d;
+}
+
+#features .col:hover .icon-square {
+    background-color: #0056b3;
+}
+
+#features .col:hover h3 {
+    color: #0056b3;
+}
+
+#features .col:hover p {
+    color: #343a40;
+}
+
+@media (max-width: 576px) {
+    #features .icon-square {
+        width: 50px;
+        height: 50px;
+    }
+
+    #features h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Testimonial Section */
+#testimonial {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#testimonial h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+#testimonial .profile-img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+#testimonial p {
+    font-size: 1.2rem;
+}
+
+/* Video Section */
+#video {
+    padding: 2rem 0;
+    background-color: #fff;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Pricing Section */
 #pricing {
-    padding: 2rem 0; /* Adjust as needed */
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+    text-align: center;
 }
 
+#pricing .pricing-header {
+    margin-bottom: 2rem;
+}
+
+#pricing .card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#pricing .card:hover {
+    transform: translateY(-10px);
+}
+
+#pricing .card-header {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+#pricing .card-body {
+    padding: 2rem;
+}
+
+#pricing .card-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#pricing .list-unstyled {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+#pricing .btn {
+    width: 100%;
+}
+
+#pricing .btn-outline-dark {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+#pricing .btn-outline-dark:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Contact Section */
+#contact {
+    padding: 2rem 0;
+    background-color: #343a40;
+    color: white;
+}
+
+#contact h5 {
+    font-size: 1.25rem;
+}
+
+#contact .nav-link {
+    color: #ddd;
+    padding: 0.2rem 0;
+}
+
+#contact .nav-link:hover {
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #title h1 {
+        font-size: 2rem;
+    }
+
+    #pricing .card-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #title h1 {
+        font-size: 1.75rem;
+    }
+
+    #pricing .card-title {
+        font-size: 1.25rem;
+    }
+
+    #pricing .list-unstyled {
+        font-size: 0.875rem;
+    }
+}
