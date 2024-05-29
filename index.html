@@ -107,6 +107,16 @@
         font-size: 1.25rem;
       }
     }
+/* Video Section Styles */
+#video {
+    background-color: #f8f9fa; /* Choose your desired background color */
+}
+
+#video iframe {
+    width: 100%; /* Make the video responsive */
+    max-width: 100%; /* Ensure the video doesn't exceed its container */
+    height: auto; /* Allow the video to adjust its height accordingly */
+}
 
     </style>
 </head>
@@ -145,6 +155,7 @@
             </div>
         </div>
     </section>
+
     <!-- Features -->
   <section id="features">
     <div class="container mt-5">
@@ -222,6 +233,19 @@
                 </div>
             </div>
     </section>
+ 
+ <!-- New Video Section -->
+<section id="video" class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <!-- You can replace this with your actual video or a placeholder -->
+                <iframe width="560" height="315" src="./video.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Pricing -->
     <section id="pricing">
         <div class="container">
